@@ -1,0 +1,47 @@
+using System;
+class A
+{
+    public interface IStudent
+    {
+        string StName { get; set; }
+        
+        int StAge { get; set; }
+
+        int Fess { get; set; }
+    }
+    public interface IEmpoyee
+    {
+        string EmpName { get; set; }
+        int EmpAge { get; set; }
+        decimal Salary { get; set; }
+    }
+    class Person : IEmpoyee, IStudent
+    {
+        public string StName { get; set; }
+        public int StAge { get; set; }
+        public int Fess { get; set; }
+        public string EmpName { get; set; }
+        public int EmpAge { get; set; }
+
+        public decimal Salary { get; set; }
+
+        public void Show()
+        {
+            Console.WriteLine("Student Name : " + StName + " " + ",Age : " + StAge + " " + " " + ",Fees : " + Fess);
+            Console.WriteLine("Employee Name : " + EmpName + " " + ",Age : " + EmpAge + " " + ",Salary : " + Salary);
+        }
+        public static void Main(string[] args)
+        {
+            Person obj = new Person();
+            obj.StName = "Jatin Dange";
+            obj.StAge = 21;
+            obj.Fess = 60000;
+            obj.EmpName = "Mayank";
+            obj.EmpAge = 50;
+            obj.Salary = 100;
+            obj.Show();
+            Console.ReadLine();
+        }
+    }
+
+}
