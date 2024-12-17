@@ -1,0 +1,46 @@
+using System;
+
+abstract class Student
+{
+    public abstract string Name { get; set; }
+    public abstract int Id { get; set; }
+    public abstract int Fess { get; set; }
+
+   
+}
+class Person:Student
+{
+    public override string Name { get; set; }
+    public  override int Id { get; set; }
+
+    public override int Fess { get; set; }
+    public string SName()
+    {
+        return Name = "Jatin Dange";
+    }
+    
+    public int SId()
+    {
+        return Id = 21;
+    }
+    public int intfess()
+    {
+        return Fess = 60000;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine("Student Name Is : "+SName());
+        Console.WriteLine("Student Id Is : "+ SId());
+        Console.WriteLine("Student Fess Is : "+intfess());
+    }
+}
+class B
+{
+    public static void Main(string[] args)
+    {
+        Person obj = new Person();
+        obj.Display();
+        
+    }
+}
