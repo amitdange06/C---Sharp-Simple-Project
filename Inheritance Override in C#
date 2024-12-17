@@ -1,0 +1,116 @@
+using System;
+
+namespace Inheritance1
+{
+    class Vehicle
+    {
+        public string VehicleMake { get; set; }
+        public int VehicleId { get; set; }
+        public int VehicleYear { get; set; }
+        public double Distance { get; set; }
+        public double Fuel { get; set; }
+
+        public void Calculation()
+        {
+            if (Fuel <= 0)
+            {
+                Console.WriteLine("Fuel value must be greater than zero.");
+                return; 
+            }
+            double Average = Distance / (2 * Fuel);
+            Console.WriteLine("Total Average in km is : " + Average);
+        }
+
+        public virtual void Details()
+        {
+            Console.WriteLine("Vehicle Make By : " + VehicleMake + " " + "Vehicle Id : " + VehicleId + " " + "Vehicle Years : " + VehicleYear);
+        }
+    }
+
+    class Bus : Vehicle
+    {
+        public int PassengerCapacity { get; set; }
+
+        public override void Details()
+        {
+            Console.WriteLine("Bus Make By : " + VehicleMake + " " + "Bus Id : " + VehicleId + " " + "Bus Years : " + VehicleYear + " " + "Bus Capacity : " + PassengerCapacity);
+        }
+    }
+
+    class Car : Bus
+    {
+        public string FuelType { get; set; }
+
+        public override void Details()
+        {
+            Console.WriteLine("Car Make By : " + VehicleMake + " " + "Car Id : " + VehicleId + " " + "Car Years : " + VehicleYear + " " + "Car Capacity : " + PassengerCapacity + " " + "Car Fuel Name :" + FuelType);
+        }
+    }
+
+    class Truck : Car
+    {
+        public int LoadCapacity { get; set; }
+
+        public override void Details()
+        {
+            Console.WriteLine("Truck Make By : " + VehicleMake + " " + "Truck Id : " + VehicleId + " " + "Truck Years : " + VehicleYear + " " + "Truck Capacity : " + PassengerCapacity + " " + "Truck Fuel Name :" + FuelType + " " + "Truck Load Capacity : " + LoadCapacity);
+        }
+    }
+
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Vehicle obj1 = new Vehicle();
+
+
+            obj1.VehicleMake = "Tata";
+            obj1.VehicleId = 32435;
+            obj1.VehicleYear = 2020;
+            obj1.Distance = 200;
+            obj1.Fuel = 2;
+            
+            obj1.Details();
+            obj1.Calculation();
+
+            Bus obj2 = new Bus();
+
+            obj2.VehicleMake = "Honda";
+            obj2.VehicleId = 64573;
+            obj2.VehicleYear = 2021;
+            obj2.Distance = 300;
+             obj2.Fuel = 1.2;
+            obj2.PassengerCapacity = 23;
+            
+            obj2.Details();
+            obj2.Calculation();
+
+            Car obj3 = new Car();
+
+
+            obj3.VehicleMake = "Hero";
+            obj3.VehicleId = 94722;
+            obj3. VehicleYear = 2022;
+            obj3.Distance = 400;
+            obj3.Fuel = 1;
+            obj3.PassengerCapacity = 4;
+            obj3.FuelType = "Petrol";
+            
+            obj3.Details();
+            obj3.Calculation();
+
+            Truck obj4 = new Truck();
+
+            obj4.VehicleMake = "Volvo";
+            obj4.VehicleId = 12345;
+            obj4.VehicleYear = 2023;
+            obj4.Distance = 500;
+            obj4.Fuel = 2;
+            obj4.PassengerCapacity = 2;
+            obj4.FuelType = "Diesel";
+            obj4.LoadCapacity = 1000;
+            obj4.Details();
+            obj4.Calculation();
+        }
+    }
+}
