@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Services;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Product112
+{
+    internal class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        static void Main(string[] args)
+        {
+            Product product = new Product();
+
+            List<Product> list = new List<Product>
+            {
+                new Product { Id = 1, Name = "Sempu", Price = 2 },
+                new Product {Id = 2, Name = "Sabun",Price = 3},
+                new Product {Id = 3, Name = "Pest",Price=4},
+                new Product{Id = 4, Name = "Pan",Price = 78},
+
+            };
+            
+            list.Max(x => x.Price);
+            Console.WriteLine("Maximum Price is : "+list.Max(x => x.Price));
+            list.Min(x => x.Price);
+            Console.WriteLine("Minimum Price is : " + list.Max(x => x.Price));
+
+            foreach (var item in list)
+            {
+                Console.WriteLine("Product Id Is : " + item.Id + "," + "Name : " + item.Name + "," + "Price : " + item.Price);
+            }
+        }
+    }
+}
