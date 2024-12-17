@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array
+{
+    public class Student
+    {
+        public string Name { get; set; }
+        public int Id { get; set; }
+        public int Age { get; set; }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, ID: {Id},Age: {Age}";
+        }
+    }
+
+    public class Person 
+    {
+        public static void Main(string[]args)
+        {
+            
+            Console.WriteLine("Enter Number Of Students : ");
+            int num = int.Parse(Console.ReadLine());
+
+            List<Student> Studentlist = new List<Student>();
+
+            for (int i = 0;  i < num; i++)
+            {
+                Student s = new Student();
+                Console.WriteLine($"Enter Student {i+1} Name : ");
+                s.Name = Console.ReadLine();
+                Console.WriteLine("Enter Student Id : ");
+                s.Id = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Student Age Is : ");
+                s.Age = int.Parse(Console.ReadLine());
+                Studentlist.Add(s);
+            }
+            Console.WriteLine("Student Ditails is : ");
+            foreach(Student obj in Studentlist)
+            {
+                Console.WriteLine(obj);
+                Console.ReadLine();
+            }
+
+        }
+    }
+}
