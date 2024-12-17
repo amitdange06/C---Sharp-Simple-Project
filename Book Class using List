@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace coding
+{
+    internal class Book
+    {
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public double Price { get; set; }
+
+
+        public static void Main(string[] args)
+        {
+            
+            List<Book> list = new List<Book>
+            {
+                new Book{Title = "Hindi",Author = "Ramesh",Price = 20000},
+                new Book{Title = "Englesh",Author = "Jatin",Price = 30900},
+                new Book{Title = "Urdu",Author = "Amit",Price = 20000}
+            };
+            foreach(var item in list)
+            {
+                Console.WriteLine("Book Title is : " +item.Title + " " + "Authore is : " + item.Author +
+                " " + "Price " + item.Price);
+            }
+            Console.ReadLine();
+        }
+
+
+
+    }
+}
