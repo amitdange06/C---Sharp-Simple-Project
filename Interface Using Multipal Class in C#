@@ -1,0 +1,109 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp12
+{
+    class Program
+    {
+
+        public interface IProduct
+        {
+            int Quantity { get; set; }
+            string Name { get; set; }
+            double Price { get; set; }
+
+            double CalculatePrice();
+        }
+
+
+        public class Mobile : IProduct
+        {
+            public int Quantity { get; set; }
+            public string Name { get; set; }
+            public double Price { get; set; }
+
+
+            public double CalculatePrice()
+            {
+                return Price * Quantity;
+            }
+
+            public class Laptop : IProduct
+            {
+                public int Quantity { get; set; }
+                public string Name { get; set; }
+                public double Price { get; set; }
+
+
+                public double CalculatePrice()
+                {
+                    return Price * Quantity;
+                }
+
+                public static void Main(string[] args)
+                {
+                    
+                    Console.Write("Enter Mobile Name : ");
+                    string mName = Console.ReadLine();
+
+                    Console.Write("Enter the Price of the Mobile: ");
+                    double mPrice = double.Parse(Console.ReadLine());
+
+                    Console.Write("Enter the Quantity of the Mobile: ");
+                    int mQuantity = int.Parse(Console.ReadLine());
+
+
+                    Mobile mobile = new Mobile
+                    {
+                        Name = mName,
+                        Price = mPrice,
+                        Quantity = mQuantity
+                    };
+
+
+                    Console.Write("Enter Laptop Name : ");
+                    string lName = Console.ReadLine();
+
+                    Console.Write("Enter the Price of the Laptop: ");
+                    double lPrice = double.Parse(Console.ReadLine());
+
+                    Console.Write("Enter the Quantity of the Laptop: ");
+                    int lQuantity = int.Parse(Console.ReadLine());
+
+
+                    Laptop laptop = new Laptop
+                    {
+                        Name = lName,
+                        Price = lPrice,
+                        Quantity = lQuantity
+                    };
+
+
+                    Console.WriteLine("Mobile Name : " + mobile.Name + "Quantity" + mobile.Quantity + " Total Price: " + mobile.CalculatePrice());
+                    Console.WriteLine("Laptop Name : " + laptop.Name + "Quantity" + laptop.Quantity + " Total Price: " + laptop.CalculatePrice());
+                    double mobileTotalPrice = mobile.CalculatePrice();
+                    double laptopTotalPrice = laptop.CalculatePrice();
+                    if (mobileTotalPrice > laptopTotalPrice)
+                    {
+                        Console.WriteLine("Largest total price is Mobile : " + mobileTotalPrice);
+                    }
+                    else if (laptopTotalPrice > mobileTotalPrice)
+                    {
+                        Console.WriteLine("Largest Total Price is Laptop : " + laptopTotalPrice);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Same Total Price.");
+                    }
+
+                    Console.ReadLine();
+                }
+            }
+        }
+    }
+}
+
+
