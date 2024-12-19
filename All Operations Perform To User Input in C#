@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TwoNumbers
+{
+    internal class Program
+    {
+        public double num1 { get; set; }
+        public double num2 { get; set; }
+
+        public double Add()
+        {
+            return num1 + num2;
+        }
+        public double Sub()
+        {
+            return num1 - num2;
+        }
+        public double Multiply() 
+        {
+            return num1 * num2;
+        }
+        public double Divide()
+        {
+            if (num2 == 0)  
+            {
+                Console.WriteLine("Division by zero");
+                return 0;
+            }
+            return num1 / num2;
+        }
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            Console.WriteLine("Enter First Number: ");
+            program.num1 = double.Parse(Console.ReadLine());  // Parsing as double
+            Console.WriteLine("Enter Second Number: ");
+            program.num2 = double.Parse(Console.ReadLine());  // Parsing as double
+            Console.WriteLine("Addition: " + program.Add());
+            Console.WriteLine("Subtraction: " + program.Sub());
+            Console.WriteLine("Multiplication: " + program.Multiply());
+            Console.WriteLine("Division: " + program.Divide());
+            Console.ReadLine();
+        }
+    }
+}
