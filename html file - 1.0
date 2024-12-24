@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home Page</title>
+</head>
+<style>
+    .container {
+        display: flex
+    }
+</style>
+<link href="StyleSheet1.css" rel="stylesheet" />
+<body>
+    <ol>
+        <h1> Information of Some Favorites  </h1>
+        <p><i> Fruits Name - </p>
+        <ol>
+            <li> Orange</li>
+            <li> Apple</li>
+            <li>Banana</li>
+            </i>
+        </ol>
+        <br />
+
+        <div class="container">
+            <img src="https://media.istockphoto.com/id/133305215/photo/fresh-fruits.jpg?s=612x612&w=0&k=20&c=kf1RVknpaV9Rs1-7jLhpIoAGyKxWj2Yozwo46vcA134=" width="180" height="220" />
+            <p>
+                <i>
+                    <b>Nutritional content :</b>
+
+                    Apples, oranges, and bananas are all nutritious fruits that contain vitamins, minerals, and fiber:
+                    <br /> <br />
+                    <b>Apples:</b>
+
+                    Contain fiber, antioxidants, and phytochemicals like flavonoids and proanthocyanidins. They can help with digestion and control blood pressure, cholesterol, and blood sugar.
+                    <br /> <br />
+                    <b>Oranges:</b>
+
+                    Contain vitamin C, calcium, folates, thiamine, flavanones, and naringin. They are calorie-negative and can be eaten as a snack or in fresh juice.
+                    <br /> <br />
+                    <b>Bananas:</b>
+
+                    Contain soluble fiber, pectin, and resistant starch, which can help reduce appetite and increase feelings of fullness. They also contain tryptophan, which can help prevent depression, and calcium, which can help build strong bones.
+                    <br /> <br />
+                </i>
+            </p>
+        </div>
+        Sugar content
+        Bananas contain 15.4 grams of sugar per banana, and other fruits with high sugar content include apples, cherries, figs, pears, mangoes, and pomegranates.
+        Acidity
+        Apples, oranges, and strawberries are acidic, while bananas are slightly basic. A pH less than 7 is acidic, and a pH greater than 7 is basic.
+        Health benefits
+        Eating a range of fruits can provide the body with nutrients and antioxidants that can boost overall health. A diet high in fruits and vegetables can reduce a person's risk of developing heart disease, cancer, inflammation, and diabetes.
+
+
+
+        <br />
+        <br />
+        </p >
+        <a href="HtmlPage2.html"> Register Our Page Now</a>
+        <br />
+        <br />
+        <br />
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGnxRybEe25Cp4hywCmV-TgUboixtVQeIMpg&s" />
+
+</body>
+</html>
